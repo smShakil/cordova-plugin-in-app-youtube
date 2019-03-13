@@ -67,7 +67,8 @@ Platforms have different behaviors.
       // Now safe to use device APIs
       try {
         window.InAppYouTube.openVideo('9bZkp7q19f0', {
-          fullscreen: true
+          fullscreen: true,
+          exitOnFinish: true
         }, function(result) {
           // console.log(JSON.stringify(result));
         }, function(reason) {
