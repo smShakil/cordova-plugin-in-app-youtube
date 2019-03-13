@@ -51,6 +51,7 @@ public class InAppYouTube extends CordovaPlugin {
     String type;
     try {
       appIntent.putExtra("force_fullscreen", isFullScreen);
+      appIntent.putExtra("rel", 0);
       this.cordova.getActivity().startActivity(appIntent);
       type = "application";
     } catch (ActivityNotFoundException ex) {
