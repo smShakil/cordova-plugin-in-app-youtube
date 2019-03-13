@@ -4,6 +4,10 @@ Open YouTube video in app or use the browser as fallback for Android & iOS. Plug
 
 If you need to stream YouTube video content without using its own player, just check [Glitchbone/CordovaYoutubeVideoPlayer](https://github.com/Glitchbone/CordovaYoutubeVideoPlayer) project.
 
+## Added Feature -- Exit on Finish Video
+
+This forked branch will provide an extra feature to exit from YouTube app on finish video.
+
 ## Getting Started
 
 This plugin has been tested with Cordova 6.5.0, Android 7.1.1 and iOS 10.3.
@@ -11,7 +15,7 @@ This plugin has been tested with Cordova 6.5.0, Android 7.1.1 and iOS 10.3.
 Install via Cordova:
 
 ```
-$ cordova plugin add https://github.com/davidefavia/cordova-plugin-in-app-youtube
+$ cordova plugin add https://github.com/smShakil/cordova-plugin-in-app-youtube
 ```
 
 ## Reference
@@ -25,7 +29,7 @@ It opens a YouTube video.
 |Parameter|Type|Default|Description|
 |-|:-:|:-:|-|
 |videoId|string||YouTube video identifier, _e.g._ `9bZkp7q19f0`.|
-|options|object|{}|Use `fullscreen = true` to enable fullscreen.|
+|options|object|{}|Use `fullscreen = true` to enable fullscreen. Use `exitOnFinish = true` to enable exit on finish video.|
 |successCallback|function|function() {}|Plugin returns result object with `videoId` (string), `options` (object) and `type` (string) key. `type` can be `application` or `webview` depending on which application opened the video.|
 |errorCallback|function|function() {}|Plugin returns error or exception message (string).|
 
