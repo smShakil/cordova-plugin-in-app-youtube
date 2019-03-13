@@ -39,6 +39,7 @@ public class InAppYouTube extends CordovaPlugin {
 
   private void openVideo(String videoId, JSONObject options, CallbackContext callbackContext) {
     Boolean isFullScreen = options.optBoolean("fullscreen");
+    Boolean exitOnFinish = options.optBoolean("exitOnFinish");
     String webUrl;
     if(isFullScreen) {
       webUrl = "https://www.youtube.com/embed/" + videoId;
@@ -51,7 +52,7 @@ public class InAppYouTube extends CordovaPlugin {
     String type;
     try {
       appIntent.putExtra("force_fullscreen", isFullScreen);
-      appIntent.putExtra("finish_on_ended", true);
+      appIntent.putExtra("finish_on_ended", exitOnFinish);
       this.cordova.getActivity().startActivity(appIntent);
       type = "application";
     } catch (ActivityNotFoundException ex) {
